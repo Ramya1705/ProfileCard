@@ -1,5 +1,12 @@
-const toggleButton = document.getElementById('toggle-dark');
+const showMoreBtn = document.getElementById('showMoreBtn');
+const moreInfo = document.getElementById('moreInfo');
 
-toggleButton.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
+showMoreBtn.addEventListener('click', () => {
+  if (moreInfo.style.display === "block") {
+    moreInfo.style.display = "none";
+    showMoreBtn.textContent = "Show More";
+  } else {
+    moreInfo.style.display = "block";
+    showMoreBtn.textContent = "Show Less";
+  }
 });
